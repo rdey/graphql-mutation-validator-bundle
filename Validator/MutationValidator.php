@@ -19,13 +19,12 @@ Class MutationValidator
         $this->validator = $validator;
     }
 
-    public function validate(RequestObject $requestObject)
+    public function validate($object)
     {
-        $errors = $this->validator->validate($requestObject);
+        $errors = $this->validator->validate($object);
 
         if(count($errors) > 0) {
             throw new UserException($errors);
         }
     }
-
 }
