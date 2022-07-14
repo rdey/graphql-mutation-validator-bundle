@@ -7,7 +7,6 @@ use GraphQL\Error\ClientAware;
 
 Class UserException extends \Exception implements ClientAware
 {
-
     const CATEGORY = 'userException';
 
     const MESSAGE = 'Invalid data set';
@@ -37,5 +36,4 @@ Class UserException extends \Exception implements ClientAware
     {
         return $this->violations;
     }
-
 }
